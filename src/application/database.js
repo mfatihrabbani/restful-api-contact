@@ -35,5 +35,5 @@ prismaClient.$on('info', (e) => {
 })
 
 prismaClient.$on('query', (e) => {
-    logger.indo(e)
+    logger.info(e)
 })
