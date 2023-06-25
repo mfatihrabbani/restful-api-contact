@@ -67,5 +67,6 @@ const login = async (request) => {
 }
 
 export default {
-    register
+    register,
+    login
 }
