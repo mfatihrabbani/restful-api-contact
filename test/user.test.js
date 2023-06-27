@@ -208,4 +208,60 @@ describe("PATCH /api/users/current", () => {
         expect(result.body.data.username).toBe("test")
         expect(result.body.data.name).toBe("new test")
     })
+
+    it("should can update password user", async () => {
+        const result = await supertest(web)
+            .patch("/api/users/current")
+            .set('Authorization', 'test')
+            .send({
+                password: "new password"
+            })
+        logger.error(result)
+
+        expect(result.status).toBe(200)
+        expect(result.body.data.username).toBe("test")
+
+        const user = await getTestUser()
+        expect(await bcrypt.compare("new password", user.password)).toBe(true)
+    })
+
+    it("should reject request", async () => {
+        const result = await supertest(web)
+            .patch("/api/users/current")
+            .set('Authorization', 'salah')
+            .send({})
+        logger.error(result)
+
+        expect(result.status).toBe(401)
+    })
+})
+
+describe("DELETE /api/users/logout", () => {
+    beforeEach(async () => {
+        await createTestUser()
+    })
+
+    afterEach(async () => {
+        await removeTestUser()
+    })
+
+    it("should can logout", async () => {
+        const result = await supertest(web)
+            .delete("/api/users/logout")
+            .set("Authorization", "test")
+
+        expect(result.status).toBe(200)
+        expect(result.body.data).toBe("OK")
+
+        const user = await getTestUser()
+        expect(user.token).toBeNull()
+    })
+
+    it("should reject if token invalid", async () => {
+        const result = await supertest(web)
+            .delete("/api/users/logout")
+            .set("Authorization", "invalid")
+
+        expect(result.status).toBe(401)
+    })
 })
