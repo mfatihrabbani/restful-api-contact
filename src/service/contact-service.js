@@ -1,8 +1,8 @@
-import { validate } from "uuid"
-import { createContactValidation } from "../validation/contact-validation"
 import { prismaClient } from "../application/database.js"
+import { createContactValidation } from "../validation/contact-validation"
+import { validate } from "../validation/validation.js"
 
-const create = (user, request) => {
+const create = async (user, request) => {
     const contact = validate(createContactValidation, request)
     contact.username = user.username
 
