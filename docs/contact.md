@@ -11,8 +11,8 @@ Request Body :
 
 ```json
 {
-    "firstname": "Name",
-    "lastname": "Lastname",
+    "first_name": "Name",
+    "last_name": "Lastname",
     "email": "email@email.com",
     "phone": "08989898982"
 }
@@ -23,8 +23,8 @@ Response Body Success :
 ```json
 {
     "data": {
-        "firstname": "Name",
-        "lastname": "Lastname",
+        "first_name": "Name",
+        "last_name": "Lastname",
         "email": "email@email.com",
         "phone": "08989898982"
     }
@@ -50,8 +50,8 @@ Request Body :
 
 ```json
 {
-    "firstname": "Name",
-    "lastname": "Lastname",
+    "first_name": "Name",
+    "last_name": "Lastname",
     "email": "email@email.com",
     "phone": "08989898982"
 }
@@ -63,8 +63,8 @@ Response Body Success :
 {
     "data": {
         "id": 1,
-        "firstname": "Name",
-        "lastname": "Lastname",
+        "first_name": "Name",
+        "last_name": "Lastname",
         "email": "email@email.com",
         "phone": "08989898982"
     }
@@ -92,8 +92,8 @@ Response Body Success :
 {
     "data": {
         "id": 1,
-        "firstname": "Name",
-        "lastname": "Lastname",
+        "first_name": "Name",
+        "last_name": "Lastname",
         "email": "email@email.com",
         "phone": "08989898982"
     }
@@ -129,22 +129,22 @@ Response Body Success :
     "data": [
         {
             "id": 1,
-            "firstname": "Name",
-            "lastname": "Lastname",
+            "first_name": "Name",
+            "last_name": "Lastname",
             "email": "email@email.com",
             "phone": "08989898982"
         },
         {
             "id": 2,
-            "firstname": "Name",
-            "lastname": "Lastname",
+            "first_name": "Name",
+            "last_name": "Lastname",
             "email": "email@email.com",
             "phone": "08989898982"
         },
         {
             "id": 3,
-            "firstname": "Name",
-            "lastname": "Lastname",
+            "first_name": "Name",
+            "last_name": "Lastname",
             "email": "email@email.com",
             "phone": "08989898982"
         },
