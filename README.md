@@ -2,7 +2,7 @@
 
  In this repositry i make a REST API with node js and database mysql
  And library i used:
- - Prisma for quering to database
+ - Prisma ORM for quering to database
  - Express JS for http Library
  - Joi for Validation
  - Winston for logging
