@@ -1,4 +1,4 @@
-﻿# restful-api-contact
+﻿# restful-api-contacts
 
  In this repository i make a REST API with node js and database mysql
  
