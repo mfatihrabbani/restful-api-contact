@@ -6,6 +6,6 @@
  - Prisma ORM for quering to database
  - Express JS for http Library
  - Joi for Validation Library
- - Winston for logging console message
+ - Winston for logging console
 
 Thank You &#128591;
