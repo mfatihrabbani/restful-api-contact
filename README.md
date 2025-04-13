@@ -1,6 +1,6 @@
 ﻿# restful-api-contacts
 
- In this repository i make a REST API with node js and database mysql
+ In this repository i make a REST API with Node JS and database mysql
  
  And library i used:
  - Prisma ORM for quering to database
